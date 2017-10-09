@@ -86,6 +86,12 @@ class TinychatClient(object):
             self.on_ping()
 
     def on_ping(self):
+        """
+        Handles ping messages from the server.
+
+        :param msg: The message object.
+        :type msg: dict
+        """
         self.send_msg({'tc': 'pong'})
 
     def send_msg(self, msg):
